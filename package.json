@@ -1,0 +1,22 @@
+{
+  "name": "capstone2",
+  "version": "1.0.0",
+  "description": "\"Estimator to calculate Biofuel Produced\"",
+  "main": "index.js",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "concurrently": "^7.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^14.3.2",
+    "express": "^4.17.2",
+    "nodemon": "^2.0.15"
+  },
+  "scripts": {
+    "start": "NODE_ENV=production pm2 start server.js",
+    "server": "nodemon server.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "author": "\"Sourabh / Aditya\"",
+  "license": "ISC"
+}
