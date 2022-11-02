@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@700&family=M+PLUS+Rounded+1c:wght@700&family=Mulish:ital,wght@1,200&family=Noto+Sans:wght@700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: auto !important;
+    /* color: #170e3e; */
+    /* Commenting since it interferes with the color of other components */
+  }
+  
+  body {
+
+    font-family: 'M PLUS Rounded 1c', 'Noto Sans', 'Exo 2', Helvetica, sans-serif;
+    background-image: url("./assets/bluebg.svg") !important;
+    background-attachment: fixed !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    
+    
+  }
+  
