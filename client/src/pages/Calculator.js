@@ -7,6 +7,7 @@ import { Container, Row, Col } from "react-bootstrap";
 
 import styled from "styled-components";
 import Nav from "../component/Nav";
+import ElectricButton from "../component/ElectricButton";
 
 const CssTextField = styled(TextField)({
   "& label.Mui-focused": {
@@ -16,6 +17,8 @@ const CssTextField = styled(TextField)({
     borderBottomColor: "green",
   },
   "& .MuiOutlinedInput-root": {
+    width: "100%",
+
     "& fieldset": {
       borderColor: "red",
     },
@@ -34,8 +37,10 @@ function Calculator() {
     <div>
       <Nav />
       <CenterContent>
-        <Calculate flex={0.5}> </Calculate>
-        <Calculate flex={9}>
+        <Division flex={0.5} height={70}>
+          {" "}
+        </Division>
+        <Division flex={9} height={70}>
           <Row
             style={{
               flex: 1,
@@ -44,30 +49,85 @@ function Calculator() {
             lg={2}
             md={2}
           >
-            <Col></Col>
+            <Col>
+              <ContentBox>
+                <p style={{ padding: "10px 30px" }}>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Integer ultrices iaculis ipsum, sed malesuada ante interdum
+                  quis. Aenean vitae pellentesque leo. Phasellus condimentum
+                  urna malesuada augue vulputate, vitae lobortis augue
+                  vestibulum. Curabitur eget purus non augue interdum malesuada.
+                  Proin sagittis sapien eu leo dignissim, id condimentum libero
+                  dictum. Nam sollicitudin sem a tortor eleifend, nec molestie
+                  sem condimentum. Donec eget sagittis nunc. Nam et iaculis
+                  justo, eu congue nulla. Ut porta turpis in erat vehicula
+                  posuere. Fusce mi ex, varius eget sagittis a, tincidunt quis
+                  ante. Etiam tincidunt, nisi ut viverra eleifend, nisi elit
+                  accumsan massa, nec gravida enim odio quis felis. Nulla ut
+                  elementum neque, et finibus metus. Sed eleifend enim a risus
+                  euismod, et ullamcorper tellus accumsan. Interdum et malesuada
+                  fames ac ante ipsum primis in faucibus.
+                </p>
+              </ContentBox>
+              <ContentBox>
+                <Solution />
+                <ElectricButton>
+                  <svg
+                    viewBox="0 0 24 24"
+                    width="24"
+                    height="24"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    fill="none"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="css-i6dzq1"
+                  >
+                    <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                  </svg>{" "}
+                  Explore me
+                </ElectricButton>
+              </ContentBox>
+            </Col>
             <Col
               style={{
+                height: "max-content",
                 display: "flex",
                 flexDirection: "column",
                 alignItems: "center",
               }}
             >
-              <Box
-                component="form"
-                sx={{
-                  "& .MuiTextField-root": { m: 3, width: "30ch" },
-                }}
-                noValidate
-                autoComplete="off"
-              >
-                <CssTextField label="Carbon" id="custom-css-outlined-input" />
-                <CssTextField label="Nitrogen" id="custom-css-outlined-input" />
-                <CssTextField label="Hydrogen" id="custom-css-outlined-input" />
-                <CssTextField label="Oxygen" id="custom-css-outlined-input" />
-              </Box>
+              <ContentBox height={60} margin={2}>
+                <Box
+                  component="form"
+                  sx={{
+                    height: "30rem",
+
+                    "& .MuiTextField-root": {
+                      m: 5,
+                      width: "50ch",
+                      display: "flex",
+                      alignItems: "center",
+                    },
+                  }}
+                  noValidate
+                  autoComplete="off"
+                >
+                  <CssTextField label="Carbon" id="custom-css-outlined-input" />
+                  <CssTextField
+                    label="Nitrogen"
+                    id="custom-css-outlined-input"
+                  />
+                  <CssTextField
+                    label="Hydrogen"
+                    id="custom-css-outlined-input"
+                  />
+                  <CssTextField label="Oxygen" id="custom-css-outlined-input" />
+                </Box>
+              </ContentBox>
             </Col>
           </Row>
-        </Calculate>
+        </Division>
       </CenterContent>
     </div>
   );
@@ -82,9 +142,9 @@ const CenterContent = styled.div`
   align-items: center;
 `;
 
-const Calculate = styled(Container)`
-  width: 80vw;
-  height: 70vh;
+const Division = styled(Container)`
+  width: ${(props) => (props.width ? props.width + "vw" : "max-content")};
+  height: ${(props) => (props.height ? props.height + "vh" : "max-content")};
   background: rgba(255, 255, 255, 0.25);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(2.5px);
@@ -92,6 +152,31 @@ const Calculate = styled(Container)`
   border-radius: 80px;
   border: 1px solid rgba(255, 255, 255, 0.18);
   display: flex;
-  flex: ${(props) => props.flex || 5};
-  margin: 50px 50px;
+  flex: ${(props) => (props.flex ? props.flex : 1)};
+  margin: ${(props) => (props.margin ? props.margin + "px" : "50px")};
+`;
+
+const ContentBox = styled.div`
+  width: 35em;
+  height: max-content;
+  background: rgba(255, 255, 255, 0);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(1px);
+  border-radius: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  display: flex;
+  margin: 10px;
+`;
+
+const Solution = styled.div`
+  width: 70%;
+  height: 8rem;
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(1px);
+  border-radius: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  display: flex;
+  flex: 1;
+  margin: 10px;
 `;
