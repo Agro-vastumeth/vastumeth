@@ -7,11 +7,19 @@ import { Container, Row, Col } from "react-bootstrap";
 
 import styled from "styled-components";
 import Nav from "../component/Nav";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import ElectricButton from "../component/ElectricButton";
+
+import {
+  faTwitter,
+  faDiscord,
+  faInstagram,
+} from "@fortawesome/free-brands-svg-icons";
 
 const CssTextField = styled(TextField)({
   "& label.Mui-focused": {
-    color: "green",
+    color: "yellow",
   },
   "& .MuiInput-underline:after": {
     borderBottomColor: "green",
@@ -20,14 +28,14 @@ const CssTextField = styled(TextField)({
     width: "100%",
 
     "& fieldset": {
-      borderColor: "red",
+      borderColor: "grey",
     },
     "&:hover fieldset": {
-      borderColor: "yellow",
+      borderColor: "white",
       boxShadow: "4px 4px 12px #176DAD,-4px -4px 12px #176DAD",
     },
     "&.Mui-focused fieldset": {
-      borderColor: "green",
+      borderColor: "white",
     },
   },
 });
@@ -39,6 +47,33 @@ function Calculator() {
       <CenterContent>
         <Division flex={0.5} height={70}>
           {" "}
+          <a
+            href="https://twitter.com/NFTGarage__?s=20&t=P4W8R2_Rme8mtCRrsv_mLQ"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <IconBox radius={30} padding={[10, 10]}>
+              <FontAwesomeIcon icon={faDiscord} color={"#fff"} size={45} />
+            </IconBox>
+          </a>
+          <a
+            href="https://twitter.com/NFTGarage__?s=20&t=P4W8R2_Rme8mtCRrsv_mLQ"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <IconBox radius={30} padding={[10, 10]}>
+              <FontAwesomeIcon icon={faTwitter} color={"#fff"} size={45} />
+            </IconBox>
+          </a>
+          <a
+            href="https://twitter.com/NFTGarage__?s=20&t=P4W8R2_Rme8mtCRrsv_mLQ"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <IconBox radius={30} padding={[10, 10]}>
+              <FontAwesomeIcon icon={faInstagram} color={"#fff"} size={5} />
+            </IconBox>
+          </a>
         </Division>
         <Division flex={9} height={70}>
           <Row
@@ -50,8 +85,8 @@ function Calculator() {
             md={2}
           >
             <Col>
-              <ContentBox>
-                <p style={{ padding: "10px 30px" }}>
+              <ContentBox padding={[10, 30]}>
+                <p>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                   Integer ultrices iaculis ipsum, sed malesuada ante interdum
                   quis. Aenean vitae pellentesque leo. Phasellus condimentum
@@ -69,7 +104,7 @@ function Calculator() {
                   fames ac ante ipsum primis in faucibus.
                 </p>
               </ContentBox>
-              <ContentBox>
+              <ContentBox padding={[10, 20]}>
                 <Solution />
                 <ElectricButton>
                   <svg
@@ -85,7 +120,7 @@ function Calculator() {
                   >
                     <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
                   </svg>{" "}
-                  Explore me
+                  BIOGAS
                 </ElectricButton>
               </ContentBox>
             </Col>
@@ -152,11 +187,16 @@ const Division = styled(Container)`
   border-radius: 80px;
   border: 1px solid rgba(255, 255, 255, 0.18);
   display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
   flex: ${(props) => (props.flex ? props.flex : 1)};
   margin: ${(props) => (props.margin ? props.margin + "px" : "50px")};
 `;
 
 const ContentBox = styled.div`
+  padding: ${({ padding }) =>
+    padding ? `${padding[0]}px ${padding[1]}px` : "0px"};
   width: 35em;
   height: max-content;
   background: rgba(255, 255, 255, 0);
@@ -166,17 +206,44 @@ const ContentBox = styled.div`
   border-radius: 50px;
   border: 1px solid rgba(255, 255, 255, 0.18);
   display: flex;
+  align-items: center;
   margin: 10px;
 `;
 
 const Solution = styled.div`
   width: 70%;
-  height: 8rem;
+  height: 5rem;
+  box-shadow: 0px 3px 15px rgba(254, 255, 239, 0.3);
   backdrop-filter: blur(1px);
   -webkit-backdrop-filter: blur(1px);
   border-radius: 50px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  border: 1px solid rgb(254, 255, 239);
   display: flex;
   flex: 1;
   margin: 10px;
+`;
+
+const IconBox = styled.div`
+  padding: ${({ padding }) =>
+    padding ? `${padding[0]}px ${padding[1]}px` : "0px"};
+  width: 3em;
+  max-width: 3em;
+  height: 3em;
+  max-hiehgt: 3em;
+  background: rgba(255, 255, 255, 0);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(1px);
+  border-radius: ${({ radius }) => (radius ? `${radius}px` : "10px")};
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 10px;
+  transition: all 0.3s;
+
+  &:hover {
+    box-shadow: -2px -1px 8px 0px #ffff0000,
+      2px 1px 8px 0px rgb(95 157 231 / 48%);
+  }
 `;

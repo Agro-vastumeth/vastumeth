@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 const ElectricButton = styled.button`
+  height: 4rem;
   display: flex;
   align-items: center;
   justify-content: center;
