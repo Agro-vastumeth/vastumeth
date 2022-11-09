@@ -42,7 +42,7 @@ const CssTextField = styled(TextField)({
 
 function Calculator() {
   return (
-    <div>
+    <div style={{ position: "relative" }}>
       <Nav />
       <CenterContent>
         <Division flex={0.5} height={70}>

@@ -6,7 +6,7 @@ import logo from "../assets/logo.png";
 
 function KishanPage() {
   return (
-    <div>
+    <div style={{ display: "relative" }}>
       <TopNav />
 
       <ContentContainer>

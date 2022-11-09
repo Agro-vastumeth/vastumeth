@@ -13,9 +13,18 @@ function Nav() {
           <NavItem>about</NavItem>
         </ModLink>
         <ModLink to="/contact">
-          <NavItem>contact us</NavItem>
+          <NavItem>contact</NavItem>
         </ModLink>
-        <NavItem />
+        <ModLink to="/collaborate">
+          <NavItem>collaborate</NavItem>
+        </ModLink>
+        <ModLink to="/reactors">
+          <NavItem>reactors</NavItem>
+        </ModLink>
+        <ModLink to="/crops">
+          <NavItem>crops</NavItem>
+        </ModLink>
+        {/* <NavItem /> */}
       </NavEnd>
     </NavWrap>
   );
@@ -25,7 +34,10 @@ export default Nav;
 
 const NavWrap = styled.nav`
   height: 15vh;
-  display: flex;
+  display: inline-flex;
+  position: relative;
+  right: 0px;
+  width: 100%;
   justify-content: space-between;
 
   // @media (max-width: 992px) {
@@ -47,7 +59,7 @@ const LogoName = styled.img`
 
 const NavEnd = styled.div`
   display: flex;
-  width: 30rem;
+  width: fit-content;
   justify-content: space-around;
   flex-direction: vertical;
   align-items: center;
