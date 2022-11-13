@@ -47,7 +47,7 @@ const Division = styled(Container)`
   //   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  padding: 3rem;
+  padding: 5rem;
   flex: ${(props) => (props.flex ? props.flex : 1)};
   margin: 50px auto;
 `;

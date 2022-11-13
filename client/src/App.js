@@ -6,7 +6,7 @@ import KishanPage from "./pages/KishanPage";
 import Calculator from "./pages/Calculator";
 import About from "./pages/About";
 import Collaborate from "./pages/Collaborate";
-import Reactors from "./pages/Reactors";
+import Process from "./pages/Process";
 import Crops from "./pages/Crops";
 
 function App() {
@@ -18,7 +18,7 @@ function App() {
           <Route path="/calculator" element={<Calculator />} />
           <Route path="/about" element={<About />} />
           <Route path="/collaborate" element={<Collaborate />} />
-          <Route path="/reactors" element={<Reactors />} />
+          <Route path="/process" element={<Process />} />
           <Route path="/crops" element={<Crops />} />
         </Routes>
       </Router>

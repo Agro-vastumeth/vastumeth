@@ -18,8 +18,8 @@ function Nav() {
         <ModLink to="/collaborate">
           <NavItem>collaborate</NavItem>
         </ModLink>
-        <ModLink to="/reactors">
-          <NavItem>reactors</NavItem>
+        <ModLink to="/process">
+          <NavItem>process</NavItem>
         </ModLink>
         <ModLink to="/crops">
           <NavItem>crops</NavItem>
@@ -75,6 +75,7 @@ const NavItem = styled.div`
 
   &:hover {
     font-size: 25px;
+    text-decoration: underline;
   }
 `;
 
@@ -82,4 +83,5 @@ const ModLink = styled(Link)`
   flex: 1;
   text-decoration: none;
   text-align: center;
+
 `;

@@ -19,7 +19,9 @@ import {
 
 const CssTextField = styled(TextField)({
   "& label.Mui-focused": {
-    color: "yellow",
+    color: "#FFFBC1",
+    fontWeight: 800,
+    fontSize: 16
   },
   "& .MuiInput-underline:after": {
     borderBottomColor: "green",
