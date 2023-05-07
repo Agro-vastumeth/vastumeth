@@ -4,17 +4,22 @@
   "description": "\"Estimator to calculate Biofuel Produced\"",
   "main": "index.js",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "colors": "^1.4.0",
     "concurrently": "^7.0.0",
     "cors": "^2.8.5",
     "dotenv": "^14.3.2",
     "express": "^4.17.2",
+    "ml-random-forest": "^2.1.0",
+    "mongodb": "^4.12.1",
+    "mongoose": "^6.7.4",
+    "node-fetch": "^2.6.7",
     "nodemon": "^2.0.15"
   },
   "scripts": {
     "start": "NODE_ENV=production pm2 start server.js",
     "server": "nodemon server.js",
-    "client": "npm start --prefix client",
+    "client": "cd ../client && npm start",
     "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "author": "\"Sourabh / Aditya\"",

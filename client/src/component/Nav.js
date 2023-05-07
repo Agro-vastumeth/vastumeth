@@ -6,14 +6,15 @@ import { Link } from "react-router-dom";
 function Nav() {
   return (
     <NavWrap>
-      <LogoName src={AppLogo} />
-
+      <Link to="/">
+        <LogoName src={AppLogo} />
+      </Link>
       <NavEnd>
         <ModLink to="/about">
           <NavItem>about</NavItem>
         </ModLink>
-        <ModLink to="/contact">
-          <NavItem>contact</NavItem>
+        <ModLink to="/calculator">
+          <NavItem>calculate</NavItem>
         </ModLink>
         <ModLink to="/collaborate">
           <NavItem>collaborate</NavItem>
@@ -83,5 +84,4 @@ const ModLink = styled(Link)`
   flex: 1;
   text-decoration: none;
   text-align: center;
-
 `;

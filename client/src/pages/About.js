@@ -42,20 +42,18 @@ function About() {
           {" "}
           <ContentBox flex={4} padding={[30, 30]}>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
-              ultrices iaculis ipsum, sed malesuada ante interdum quis. Aenean
-              vitae pellentesque leo. Phasellus condimentum urna malesuada augue
-              vulputate, vitae lobortis augue vestibulum. Curabitur eget purus
-              non augue interdum malesuada. Proin sagittis sapien eu leo
-              dignissim, id condimentum libero dictum. Nam sollicitudin sem a
-              tortor eleifend, nec molestie sem condimentum. Donec eget sagittis
-              nunc. Nam et iaculis justo, eu congue nulla. Ut porta turpis in
-              erat vehicula posuere. Fusce mi ex, varius eget sagittis a,
-              tincidunt quis ante. Etiam tincidunt, nisi ut viverra eleifend,
-              nisi elit accumsan massa, nec gravida enim odio quis felis. Nulla
-              ut elementum neque, et finibus metus. Sed eleifend enim a risus
-              euismod, et ullamcorper tellus accumsan. Interdum et malesuada
-              fames ac ante ipsum primis in faucibus.
+              <h3>Purpose</h3>
+              <p>
+                The purpose of the website is to help the farmers, service
+                sector companies and agencies to know how an agricultural waste
+                can be helpful for the sustainability of the environment.
+              </p>
+              <h3>Solution</h3>
+              <p>
+                The calculator would help to provide an approximate estimation
+                of the biogas based on the elemental composition of agricultural
+                waste, and combination of waste produced in particular state
+              </p>
             </p>
           </ContentBox>
           <ContentBox flex={6} margin={2}>

@@ -51,7 +51,7 @@ const Wrapper = styled.div`
 `;
 
 const CustomCard = styled.div`
-  height: auto !important;
+  height: fit-content !important;
   width: auto;
   color: black;
   background-size: cover;
@@ -79,6 +79,7 @@ const Checkout = styled.a`
 
 const CardImg = styled.img`
   width: 170px;
+  height: fit-content;
   margin-top: -50px;
   margin-right: 30px;
   border-radius: 10px 10px 0 0 !important;
@@ -96,10 +97,13 @@ const Title = styled.h1`
 
 const Body = styled.div`
   display: flex;
+  height: fit-content;
   align-items: center;
   @media (max-width: 765px) {
     flex-direction: column;
     align-items: center;
+  height: fit-content;
+
   }
 `;
 
